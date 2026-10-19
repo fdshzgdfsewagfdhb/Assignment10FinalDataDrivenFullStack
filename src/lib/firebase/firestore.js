@@ -56,6 +56,8 @@ const updateWithRating = async (
     numRatings: newNumRatings,
     sumRating: newSumRating,
     avgRating: newAverage,
+    //ADD NEW FIELD FOR USERID MAKING REVIEW TO USE AS SECURITY CHECK
+    lastReviewUserId: review.userId,
   });
 
   // Sets up the new rating document (a separate collection item) with the review data and timestamp
