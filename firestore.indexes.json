@@ -1,11 +1,11 @@
 {
   "indexes": [
     {
-      "collectionGroup": "restaurants",
+      "collectionGroup": "stories",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "category",
+          "fieldPath": "genre",
           "order": "ASCENDING"
         },
         {
@@ -15,11 +15,11 @@
       ]
     },
     {
-      "collectionGroup": "restaurants",
+      "collectionGroup": "stories",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "category",
+          "fieldPath": "genre",
           "order": "ASCENDING"
         },
         {
@@ -29,25 +29,25 @@
       ]
     },
     {
-      "collectionGroup": "restaurants",
+      "collectionGroup": "stories",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "category",
+          "fieldPath": "genre",
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "price",
+          "fieldPath": "length",
           "order": "ASCENDING"
         }
       ]
     },
     {
-      "collectionGroup": "restaurants",
+      "collectionGroup": "stories",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "city",
+          "fieldPath": "author",
           "order": "ASCENDING"
         },
         {
@@ -57,11 +57,11 @@
       ]
     },
     {
-      "collectionGroup": "restaurants",
+      "collectionGroup": "stories",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "city",
+          "fieldPath": "author",
           "order": "ASCENDING"
         },
         {
@@ -71,25 +71,25 @@
       ]
     },
     {
-      "collectionGroup": "restaurants",
+      "collectionGroup": "stories",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "city",
+          "fieldPath": "author",
           "order": "ASCENDING"
         },
         {
-          "fieldPath": "price",
+          "fieldPath": "length",
           "order": "ASCENDING"
         }
       ]
     },
     {
-      "collectionGroup": "restaurants",
+      "collectionGroup": "stories",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "price",
+          "fieldPath": "length",
           "order": "ASCENDING"
         },
         {
@@ -99,11 +99,11 @@
       ]
     },
     {
-      "collectionGroup": "restaurants",
+      "collectionGroup": "stories",
       "queryScope": "COLLECTION",
       "fields": [
         {
-          "fieldPath": "price",
+          "fieldPath": "length",
           "order": "ASCENDING"
         },
         {

@@ -1,148 +1,76 @@
-// Random restaurant data that is added to Firestore
-// After you've signed into Friendly Eats, click the dropdown
-// menu in the top right corner and select "Add random data"
+import { STORY_GENRES } from "@/src/lib/storyMeta.js";
 
 export const randomData = {
-  restaurantNames: [
-    "Savory Bites",
-    "Gourmet Delight",
-    "Wholesome Kitchen",
-    "Cheesy Cravings",
-    "Spice Fusion",
-    "Burger Bonanza",
-    "Pasta Paradise",
-    "Taco Tango",
-    "Sushi Sensation",
-    "Pizza Pizzazz",
-    "Cafe Mocha",
-    "Mouthwatering BBQ",
-    "Thai Temptations",
-    "Sizzling Steaks",
-    "Veggie Heaven",
-    "Seafood Symphony",
-    "Wok & Roll",
-    "French Flavors",
-    "Tandoori Nights",
-    "Mediterranean Magic",
-    "Enchilada Express",
-    "Ramen Ramble",
-    "Deli Delights",
-    "Crepes & Co.",
-    "Hot Pot Haven",
-    "Tasty Tandoor",
-    "Bistro Bliss",
-    "Curry Corner",
-    "Pancake Paradise",
-    "Pita Panache",
-    "Biryani Bliss",
-    "Garden Grub",
-    "Dim Sum Delish",
-    "Cajun Craze",
-    "Fondue Fantasy",
-    "Bagel Bar",
-    "Tapas Talk",
-    "Pho Fusion",
-    "Brunch Bunch",
-    "Steaming Samosas",
-    "Falafel Frenzy",
+  storyTitles: [
+    "The Last Lantern",
+    "Letters from the Tide",
+    "A Map of Quiet Places",
+    "The Clockmaker's Daughter",
+    "Night Train to Elsewhere",
+    "The Orchard at Dusk",
+    "Paper Boats",
+    "When the River Remembered",
+    "The House with Two Shadows",
+    "Salt and Static",
+    "The Librarian of Lost Names",
+    "A Door Left Ajar",
+    "Starlight in the Kitchen",
+    "The Fox and the Ferry",
+    "After the Bell",
   ],
-  restaurantCities: [
-    "New York",
-    "Los Angeles",
-    "London",
-    "Paris",
-    "Tokyo",
-    "Mumbai",
-    "Dubai",
-    "Amsterdam",
-    "Seoul",
-    "Singapore",
-    "Istanbul",
+  storyAuthors: [
+    "Mira Chen",
+    "Jonas Hale",
+    "Priya Nair",
+    "Eli Vargas",
+    "Nora Blake",
+    "Samir Okonkwo",
+    "Hannah Frost",
+    "Leo Park",
   ],
-  restaurantCategories: [
-    "Italian",
-    "Chinese",
-    "Japanese",
-    "Mexican",
-    "Indian",
-    "Mediterranean",
-    "Caribbean",
-    "Cajun",
-    "German",
-    "Russian",
-    "Cuban",
-    "Organic",
-    "Tapas",
+  storyGenres: STORY_GENRES,
+  storyBodies: [
+    `The lantern on the pier had been dark for three winters, but tonight someone lit it again. Mara watched the flame from her kitchen window and counted the seconds between each gust of wind. When the light held, she put on her coat.
+
+Down on the boards, the air smelled like salt and wet rope. A note was tied to the lantern's handle in handwriting she had not seen since the ferry stopped running. It said only: come before the tide turns.
+
+She walked the length of the pier until the boards ended and the black water began. A small boat knocked against the pilings, empty except for a second lantern, unlit, waiting for a match.`,
+    `Every Tuesday, Theo left a letter in the hollow of the old oak. He never signed them. He wrote about the weather, the neighbor's cat, and the dream in which the river ran backward through town.
+
+On the twelfth Tuesday the hollow was empty. In its place, a reply: I have been reading. Meet me where the current forgets itself.
+
+Theo did not know that place, so he followed the river until the water grew still as glass. A woman sat on a rock, holding all twelve letters, dry as if they had never known rain.`,
+    `The clockmaker's daughter could hear time the way other people heard music. Each clock in the shop kept a slightly different beat, and she tuned them until the room sounded like a single held note.
+
+One morning a stranger brought a pocket watch that refused to tick. Inside the case was no machinery at all, only a folded map of a city that did not exist. She spent the afternoon drawing streets from the sound it made when she shook it.
+
+By evening the watch had a second hand. It pointed not at minutes, but at a door in the back of the shop that had never been there before.`,
+    `Rain stitched the windows shut. In the boarding house kitchen, two strangers argued over the last of the bread and ended up splitting it, then the kettle, then the story of why they were both on the night train.
+
+Neither mentioned the letter in their coat. Both letters named the same station, the same hour, the same person who would not be there.
+
+When the train slowed, they stood up together, as if they had practiced.`,
+    `The library closed at dusk, but the names kept arriving. They appeared in the margins of returned books: people who had been forgotten on purpose. The night librarian copied each name into a ledger bound in green cloth.
+
+A boy came in asking for his sister. The ledger knew her. The boy did not like what it said. He asked if names could be rewritten.
+
+The librarian handed him a pencil and a warning: every correction writes a new absence somewhere else.`,
   ],
-  restaurantReviews: [
-    { text: "The food was exceptional, absolutely loved it!", rating: 5 },
-    { text: "Delicious dishes and excellent service!", rating: 5 },
-    { text: "The flavors were so rich and satisfying.", rating: 5 },
-    { text: "Great ambiance and friendly staff.", rating: 5 },
-    { text: "A delightful culinary experience!", rating: 5 },
-    {
-      text: "Mouthwatering dishes that left me wanting more.",
-      rating: 5,
-    },
-    { text: "Perfectly cooked and seasoned meals.", rating: 5 },
-    { text: "Incredible presentation and top-notch taste.", rating: 5 },
-    { text: "Good food and cozy atmosphere.", rating: 4 },
-    { text: "Enjoyed the meal, would come back again.", rating: 4 },
-    { text: "Tasty options and reasonable prices.", rating: 4 },
-    { text: "Friendly staff, but the food was just okay.", rating: 3 },
-    { text: "Decent experience, but nothing extraordinary.", rating: 3 },
-    { text: "The food was average, could be better.", rating: 3 },
-    {
-      text: "Service was slow, and the dishes were disappointing.",
-      rating: 2,
-    },
-    { text: "Expected more, but left unsatisfied.", rating: 2 },
-    { text: "Underwhelming taste and presentation.", rating: 2 },
-    { text: "Disappointing experience overall.", rating: 2 },
-    {
-      text: "The food was terrible, will never go back again.",
-      rating: 1,
-    },
-    {
-      text: "Worst restaurant experience I've had so far.",
-      rating: 1,
-    },
-    { text: "Avoid this place, the food was inedible.", rating: 1 },
-    { text: "Unpleasant service and tasteless dishes.", rating: 1 },
-    { text: "Simply outstanding! A culinary masterpiece.", rating: 5 },
-    { text: "Couldn't get enough of the amazing flavors.", rating: 5 },
-    { text: "Top-notch quality, worth every penny.", rating: 5 },
-    { text: "Highly recommended for food enthusiasts.", rating: 5 },
-    { text: "Exquisite dishes that pleased my taste buds.", rating: 5 },
-    { text: "A gem of a place, impeccable in every aspect.", rating: 5 },
-    { text: "Excellent selection of dishes on the menu.", rating: 5 },
-    { text: "A fantastic dining experience overall.", rating: 5 },
-    {
-      text: "The atmosphere was lovely, perfect for a date night.",
-      rating: 4,
-    },
-    { text: "Good food, but the service could be improved.", rating: 4 },
-    {
-      text: "Pleasantly surprised by the variety of flavors.",
-      rating: 4,
-    },
-    { text: "Well-prepared dishes and friendly staff.", rating: 4 },
-    { text: "Satisfying meals, suitable for a quick bite.", rating: 4 },
-    { text: "The food was okay, nothing special.", rating: 3 },
-    {
-      text: "Service could be better, but the taste was fine.",
-      rating: 3,
-    },
-    {
-      text: "An average experience, didn't leave a lasting impression.",
-      rating: 3,
-    },
-    { text: "Expected more value for the price.", rating: 2 },
-    { text: "Mediocre taste and lackluster presentation.", rating: 2 },
-    {
-      text: "Regret spending money on such a disappointing meal.",
-      rating: 2,
-    },
-    { text: "Not up to par with my expectations.", rating: 2 },
+  storyReviews: [
+    { text: "The prose is spare and the ending landed harder than I expected.", rating: 5 },
+    { text: "Beautiful atmosphere. I wanted a little more from the characters.", rating: 4 },
+    { text: "Plot twists felt earned, and the last paragraph is still in my head.", rating: 5 },
+    { text: "Pacing dragged in the middle, but the voice is distinctive.", rating: 3 },
+    { text: "A quiet story that trusts the reader. Highly recommended.", rating: 5 },
+    { text: "Imagery over story — pretty sentences, not much underneath.", rating: 2 },
+    { text: "I cared about these people by the second page.", rating: 5 },
+    { text: "The genre setup is familiar, but the ending is original.", rating: 4 },
+    { text: "Too abrupt. It reads like a sketch instead of a finished piece.", rating: 2 },
+    { text: "Sharp dialogue and a setting I could walk through.", rating: 4 },
+    { text: "Didn't connect with the narrator, even though the writing is skilled.", rating: 3 },
+    { text: "One of the best short pieces I've read here.", rating: 5 },
+    { text: "Confusing timeline; I had to reread twice and still felt lost.", rating: 1 },
+    { text: "Tender without being sentimental. I'll look for more by this author.", rating: 5 },
+    { text: "The hook is strong, then the story forgets what it promised.", rating: 2 },
   ],
 };
