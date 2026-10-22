@@ -1,5 +1,5 @@
 ### Friendly Eats with Next.js + Firebase
-//test
+//testv2
 The codelab has the full instructions, but as a quick start, you can do this.
 
 #### Run the application
