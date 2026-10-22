@@ -1,7 +1,7 @@
 "use client";
 
 
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import RatingPicker from "@/src/components/RatingPicker.jsx";
 import { handleReviewFormSubmission } from "@/src/app/actions.js";
 
@@ -15,6 +15,7 @@ const ReviewDialog = ({
 }) => {
   const dialog = useRef();
 
+  // dialogs only render their backdrop when called with `showModal`
   useLayoutEffect(() => {
     if (isOpen) {
       dialog.current.showModal();
@@ -24,6 +25,7 @@ const ReviewDialog = ({
   }, [isOpen, dialog]);
 
   const handleClick = (e) => {
+    // Close dialog if click is outside the dialog element
     if (e.target === dialog.current) {
       handleClose();
     }
@@ -55,7 +57,7 @@ const ReviewDialog = ({
             />
           </p>
 
-          <input type="hidden" name="storyId" value={id} />
+          <input type="hidden" name="restaurantId" value={id} />
           <input type="hidden" name="userId" value={userId} />
         </article>
         <footer>

@@ -1,6 +1,6 @@
+// The filters shown on the restaurant listings page
+
 import Tag from "@/src/components/Tag.jsx";
-import { STORY_GENRES, STORY_LENGTHS } from "@/src/lib/storyMeta.js";
-import { randomData } from "@/src/lib/randomData.js";
 
 function FilterSelect({ label, options, value, onChange, name, icon }) {
   return (
@@ -9,17 +9,11 @@ function FilterSelect({ label, options, value, onChange, name, icon }) {
       <label>
         {label}
         <select value={value} onChange={onChange} name={name}>
-          {options.map((option) => {
-            const optionValue =
-              typeof option === "object" ? option.value : option;
-            const optionLabel =
-              typeof option === "object" ? option.label : option;
-            return (
-              <option value={optionValue} key={`${name}-${optionValue}`}>
-                {optionValue === "" ? "All" : optionLabel}
-              </option>
-            );
-          })}
+          {options.map((option, index) => (
+            <option value={option} key={index}>
+              {option === "" ? "All" : option}
+            </option>
+          ))}
         </select>
       </label>
     </div>
@@ -44,7 +38,7 @@ export default function Filters({ filters, setFilters }) {
         <summary>
           <img src="/filter.svg" alt="filter" />
           <div>
-            <p>Stories</p>
+            <p>Restaurants</p>
             <p>Sorted by {filters.sort || "Rating"}</p>
           </div>
         </summary>
@@ -57,35 +51,57 @@ export default function Filters({ filters, setFilters }) {
           }}
         >
           <FilterSelect
-            label="Genre"
-            options={["", ...STORY_GENRES]}
-            value={filters.genre}
-            onChange={(event) => handleSelectionChange(event, "genre")}
-            name="genre"
+            label="Category"
+            options={[
+              "",
+              "Italian",
+              "Chinese",
+              "Japanese",
+              "Mexican",
+              "Indian",
+              "Mediterranean",
+              "Caribbean",
+              "Cajun",
+              "German",
+              "Russian",
+              "Cuban",
+              "Organic",
+              "Tapas",
+            ]}
+            value={filters.category}
+            onChange={(event) => handleSelectionChange(event, "category")}
+            name="category"
             icon="/food.svg"
           />
 
           <FilterSelect
-            label="Author"
-            options={["", ...randomData.storyAuthors]}
-            value={filters.author}
-            onChange={(event) => handleSelectionChange(event, "author")}
-            name="author"
+            label="City"
+            options={[
+              "",
+              "New York",
+              "Los Angeles",
+              "London",
+              "Paris",
+              "Tokyo",
+              "Mumbai",
+              "Dubai",
+              "Amsterdam",
+              "Seoul",
+              "Singapore",
+              "Istanbul",
+            ]}
+            value={filters.city}
+            onChange={(event) => handleSelectionChange(event, "city")}
+            name="city"
             icon="/location.svg"
           />
 
           <FilterSelect
-            label="Length"
-            options={[
-              { value: "", label: "All" },
-              ...STORY_LENGTHS.map((item) => ({
-                value: String(item.value),
-                label: item.label,
-              })),
-            ]}
-            value={filters.length}
-            onChange={(event) => handleSelectionChange(event, "length")}
-            name="length"
+            label="Price"
+            options={["", "$", "$$", "$$$", "$$$$"]}
+            value={filters.price}
+            onChange={(event) => handleSelectionChange(event, "price")}
+            name="price"
             icon="/price.svg"
           />
 
@@ -105,9 +121,9 @@ export default function Filters({ filters, setFilters }) {
                 type="reset"
                 onClick={() => {
                   setFilters({
-                    author: "",
-                    genre: "",
-                    length: "",
+                    city: "",
+                    category: "",
+                    price: "",
                     sort: "",
                   });
                 }}
@@ -124,19 +140,17 @@ export default function Filters({ filters, setFilters }) {
 
       <div className="tags">
         {Object.entries(filters).map(([type, value]) => {
+          // The main filter bar already specifies what
+          // sorting is being used. So skip showing the
+          // sorting as a 'tag'
           if (type == "sort" || value == "") {
             return null;
           }
-          const display =
-            type === "length"
-              ? STORY_LENGTHS.find((item) => String(item.value) === String(value))
-                  ?.label || value
-              : value;
           return (
             <Tag
-              key={`${type}-${value}`}
+              key={value}
               type={type}
-              value={display}
+              value={value}
               updateField={updateField}
             />
           );
